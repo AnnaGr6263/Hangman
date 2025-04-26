@@ -1,0 +1,89 @@
+/* === General body styles === */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  /* === Styles for the word container where the hidden word is displayed === */
+  #wordContainer {
+    margin: 20px;
+    font-size: 24px;
+    letter-spacing: 10px;
+  }
+  
+  /* === Container for all letter buttons === */
+  #lettersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* === Styles for individual letter buttons === */
+  .letterBtn {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+  
+  /* === Hover effect for letter buttons === */
+  .letterBtn:hover {
+    background-color: #ddd;
+  }
+  
+  /* === Styles for used (clicked) letter buttons === */
+  .letterBtn.used {
+    background-color: #2196F3;
+    color: white;
+    pointer-events: none;
+  }
+  
+  /* === Display the game result (win/lose message) === */
+  #result {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* === General styles for all buttons (New Game, Cancel) === */
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+/* === Touch screen improvements for letter buttons === */
+.letterBtn {
+  touch-action: manipulation;
+  user-select: none;
+}
+
+/* === Responsive design: Adjustments for small screens (phones, tablets) === */
+@media (max-width: 600px) {
+  #wordContainer {
+    font-size: 18px;
+    letter-spacing: 6px;
+  }
+
+  .letterBtn {
+    font-size: 16px;
+    padding: 10px;
+    flex: 1 0 15%;
+  }
+
+  #lettersContainer {
+    max-width: 90%;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
